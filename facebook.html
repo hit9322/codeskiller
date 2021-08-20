@@ -1,0 +1,102 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+</head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  background: #3a6186;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.bgimg {
+  background: url('https://instagram.fbom34-1.fna.fbcdn.net/v/t51.2885-19/s320x320/117818854_621710461863555_4652141768073532540_n.jpg?_nc_ht=instagram.fbom34-1.fna.fbcdn.net&_nc_ohc=DBLIy98CbsoAX-7KzQt&oh=eedc937c74102426aec249cf22e82d0d&oe=5F947A42 ') no-repeat;
+  height: 100vh;
+  background-position: center;
+  background-size: 100;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 45px;
+  left: 43%;
+}
+
+/* The element to apply the animation to */
+.topleft a:hover{
+  padding:10px 10px;
+  background: linear-gradient(to right, #de6161, #2657eb);
+  position: relative;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <a class="pt-5" href="index1.html" ><span style="color: #ff5f6d;">CODE</span><span style="color: #1fddff;"> SKILLER </span></a>
+  </div>
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <p id="demo" style="font-size:30px;color: black;top: -10px;"></p>
+  </div>
+  <div class="bottomleft">
+    <p >© 2020 hitesh vaishnav, All Rights Reserved.</p>
+  </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
